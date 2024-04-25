@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
 type_parametr = [None, 4, 6]  # 4 - variable, 6 - array
 id_functions = {"ask_variable": 4, "ask_array": 6}
 
-
 def get_ans(text):
     print(text)
     return text.lower() == '+'

@@ -15,11 +15,11 @@ def find_test(chat_id, test_format, correct_id, bad_id):
 
             cmd = 'python ' + path
 
-            Q1 = (cmd + f'correct/{correct_id}').split()
+            Q1 = (cmd + f'{correct_id}').split()
             cmd_f = Popen(Q1, stdin=PIPE, stdout=PIPE, stderr=STDOUT, text=True)
             correct_out = cmd_f.communicate(input=in_txt)[:-1]
 
-            Q2 = (cmd + f'bad/{bad_id}').split()
+            Q2 = (cmd + f'{bad_id}').split()
             cmd_f = Popen(Q2, stdin=PIPE, stdout=PIPE, stderr=STDOUT, text=True)
             bad_out = cmd_f.communicate(input=in_txt)[:-1]
 
